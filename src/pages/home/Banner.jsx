@@ -1,3 +1,4 @@
+"use client"
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -8,9 +9,10 @@ import 'swiper/css/pagination';
 // import required modules
 import { EffectFade, Pagination } from 'swiper/modules';
 
-import image_1 from "../../assets/home/slide1.jpg"
-import image_2 from "../../assets/home/slide2.jpg"
-import image_3 from "../../assets/home/slide3.jpg"
+import image_1 from "@/assets/home/slide1.jpg"
+import image_2 from "@/assets/home/slide2.jpg"
+import image_3 from "@/assets/home/slide3.jpg"
+import Image from 'next/image';
 
 const Banner = () => {
     return (
@@ -33,7 +35,7 @@ const Banner = () => {
                             <h2 className='capitalize text-5xl font-bold my-3'>New Arrival Collection</h2>
                             <button className='bg-black text-white px-8 py-2 hover:bg-[#56cfe1] duration-500'>Explore Now</button>
                         </div>
-                        <img className='w-full h-screen object-cover' src={image_1} />
+                        <Image className='w-full h-screen object-cover' src={image_1} alt='banner image'/>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -43,7 +45,7 @@ const Banner = () => {
                             <h2 className='capitalize text-5xl font-bold my-3'>Save up to 70%</h2>
                             <button className='bg-black text-white px-8 py-2 hover:bg-[#56cfe1] duration-500'>Explore Now</button>
                         </div>
-                        <img className='w-full h-screen object-cover' src={image_2} />
+                        <Image className='w-full h-screen object-cover' src={image_2} alt='banner image'/>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -53,7 +55,7 @@ const Banner = () => {
                             <h2 className='capitalize text-5xl font-bold my-3'>Lookbook collection</h2>
                             <button className='bg-black text-white px-8 py-2 hover:bg-[#56cfe1] duration-500'>Explore Now</button>
                         </div>
-                        <img className='w-full h-screen object-cover' src={image_3} />
+                        <Image className='w-full h-screen object-cover' src={image_3} alt='banner image'/>
                     </div>
                 </SwiperSlide>
             </Swiper>
