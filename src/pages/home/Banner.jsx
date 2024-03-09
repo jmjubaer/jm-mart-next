@@ -9,9 +9,9 @@ import 'swiper/css/pagination';
 // import required modules
 import { EffectFade, Pagination } from 'swiper/modules';
 
-import image_1 from "@/assets/home/slide1.jpg"
-import image_2 from "@/assets/home/slide2.jpg"
-import image_3 from "@/assets/home/slide3.jpg"
+import image_1 from "@/assets/home/banner/slide1.jpg"
+import image_2 from "@/assets/home/banner/slide2.jpg"
+import image_3 from "@/assets/home/banner/slide3.jpg"
 import Image from 'next/image';
 
 const Banner = () => {
@@ -33,7 +33,7 @@ const Banner = () => {
                         <div className="absolute top-1/2 -translate-y-1/2 left-[5%]">
                             <h3 className='uppercase text-2xl font-medium'>Summer 2024</h3>
                             <h2 className='capitalize text-5xl font-bold my-3'>New Arrival Collection</h2>
-                            <button className='bg-black text-white px-8 py-2 hover:bg-[#56cfe1] duration-500'>Explore Now</button>
+                            <button className='primary_btn'>Explore Now</button>
                         </div>
                         <Image className='w-full h-screen object-cover' src={image_1} alt='banner image'/>
                     </div>
@@ -43,7 +43,7 @@ const Banner = () => {
                         <div className="absolute top-1/2 -translate-y-1/2 left-[5%]">
                             <h3 className='uppercase text-2xl font-medium'>Summer sale</h3>
                             <h2 className='capitalize text-5xl font-bold my-3'>Save up to 70%</h2>
-                            <button className='bg-black text-white px-8 py-2 hover:bg-[#56cfe1] duration-500'>Explore Now</button>
+                            <button className='primary_btn'>Explore Now</button>
                         </div>
                         <Image className='w-full h-screen object-cover' src={image_2} alt='banner image'/>
                     </div>
@@ -53,7 +53,7 @@ const Banner = () => {
                         <div className="absolute top-1/2 -translate-y-1/2 right-[5%] text-right">
                             <h3 className='uppercase text-2xl font-medium'>New Season</h3>
                             <h2 className='capitalize text-5xl font-bold my-3'>Lookbook collection</h2>
-                            <button className='bg-black text-white px-8 py-2 hover:bg-[#56cfe1] duration-500'>Explore Now</button>
+                            <button className='primary_btn'>Explore Now</button>
                         </div>
                         <Image className='w-full h-screen object-cover' src={image_3} alt='banner image'/>
                     </div>
