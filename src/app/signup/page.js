@@ -85,19 +85,6 @@ const SignUp = () => {
                         </div>
                     </div>
                     <div className="w-full flex flex-col mt-8">
-                        <label className="text-xl mb-4" htmlFor="">
-                            Profile Image:
-                        </label>
-                        <input
-                            required
-                            type="file"
-                            {...register("image")}
-                            accept="image/*"
-                            id=""
-                            className="disc_effects rounded-xl  outline-none file-input"
-                        />
-                    </div>
-                    <div className="w-full flex flex-col mt-8">
                         <label className="text-xl mb-4" htmlFor="email">
                             Email:
                         </label>

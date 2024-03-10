@@ -13,15 +13,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <header>
-          <Navbar></Navbar>
-        </header>
         <GlobalProvider>
+          <header>
+            <Navbar></Navbar>
+          </header>
           <main className="min-h-[calc(100vh-200px)]">{children}</main>
+          <footer>
+            <Footer></Footer>
+          </footer>
         </GlobalProvider>
-        <footer>
-          <Footer></Footer>
-        </footer>
       </body>
     </html>
   );
