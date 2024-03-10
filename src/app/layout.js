@@ -2,6 +2,7 @@ import { poppins } from "@/utils/Fonts";
 import "./globals.css";
 import { GlobalProvider } from "@/Provider/GlobalProvider";
 import Navbar from "@/pages/shere/Navbar";
+import Footer from "@/pages/shere/Footer";
 
 export const metadata = {
   title: "Jm Mart",
@@ -18,7 +19,9 @@ export default function RootLayout({ children }) {
         <GlobalProvider>
           <main className="min-h-[calc(100vh-200px)]">{children}</main>
         </GlobalProvider>
-        <footer></footer>
+        <footer>
+          <Footer></Footer>
+        </footer>
       </body>
     </html>
   );

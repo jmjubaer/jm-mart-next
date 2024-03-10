@@ -19,6 +19,34 @@ html{
 .primary_btn{
   @apply bg-black text-white px-8 py-2 hover:bg-[#56cfe1] duration-500
 }
+.primary_btn_rounded{
+  @apply bg-black rounded-full text-white px-4 py-2 hover:bg-[#56cfe1] duration-500 text-sm
+}
 .hero_btn{
   @apply capitalize font-medium bg-white px-5 py-2 hover:bg-[#56cfe1] duration-500
+}
+
+.disc_effects{
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),inset -5px -5px 10px #fff;
+  background: transparent;
+}
+.disc_effects_up{
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+  background: transparent;
+}
+.active:active, .active:hover{
+  @apply disc_effects
+}
+.shadow_effect{
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1),
+  -15px -15px 20px #fffb;
+  background: transparent;
+}
+.file-input::file-selector-button{
+  background-color: #014A97;
+  border: 0;
+  height: 40px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
 }
