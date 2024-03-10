@@ -5,7 +5,7 @@ import Image from 'next/image';
 import React from 'react';
 
 const Products = async() => {
-    const res = await fetch("http://localhost:3000/api/products");
+    const res = await fetch("https://jm-mart-next.vercel.app/api/products");
     const products = await res.json();
 
     return (

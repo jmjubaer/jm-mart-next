@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import bg_image from "@/assets/bg-heading.jpg"
 const ProductsPage = async() => {
-    const res = await fetch("http://localhost:3000/api/products");
+    const res = await fetch("https://jm-mart-next.vercel.app/api/products");
     const products = await res.json();
     return (
         <div className=''>
