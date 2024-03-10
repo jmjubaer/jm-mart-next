@@ -3,16 +3,15 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
 import { useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import SocialLogin from "@/components/SocialLogin";
 import { GlobalSate } from "@/Provider/GlobalProvider";
 const SignUp = () => {
     const { register, handleSubmit, reset } = useForm();
     const [show,setShow] = useState(true);
     const [cShow,setcShow] = useState(true);
-    const { createUser } = GlobalSate();
+    const { createUser,continueWithGoogle } = GlobalSate();
     const router = useRouter();
     const handleSingUp = (data) => {
         const fullName = data?.firstName + " " + data?.lastName;
@@ -52,6 +51,25 @@ const SignUp = () => {
             });
         }
     };
+    const handleGoogleSignIn = () => {
+        continueWithGoogle()
+        .then(() => {
+            Swal.fire({
+                icon: 'success',
+                title: 'User Login Successful',
+                showConfirmButton: false,
+                timer: 1500
+              })
+              router.push('/')
+        })
+        .catch(err => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: `${err.message}`,
+              })
+        })
+    }
     return (
         <div className="bg-[#edf1f4] py-10 ">
             <div className="bg-white w-4/5 mx-auto rounded-xl p-5 my-10 disc_effects_up ">
@@ -153,7 +171,8 @@ const SignUp = () => {
                     </Link>
                 </p>
                 <div className="divider"> or </div>
-                <SocialLogin></SocialLogin>
+                <button onClick={handleGoogleSignIn} className="flex items-center gap-3 disc_effects_up p-3 px-8 w-1/2 font-bold text-center mx-auto justify-center text-red-500 active rounded-xl"><FaGoogle className="text-2xl"/><span>Google</span></button>
+
             </div>
         </div>
     );
